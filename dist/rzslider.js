@@ -1,7 +1,7 @@
 /*! angularjs-slider - v7.0.0 - 
  (c) Rafal Zajac <rzajac@gmail.com>, Valentin Hervieu <valentin@hervi.eu>, Jussi Saarivirta <jusasi@gmail.com>, Angelin Sirbu <angelin.sirbu@gmail.com> - 
  https://github.com/angular-slider/angularjs-slider - 
- 2019-03-06 */
+ 2019-12-15 */
 /*jslint unparam: true */
 /*global angular: false, console: false, define, module */
 ;(function(root, factory) {
@@ -2023,7 +2023,9 @@
             ehEnd,
             eventNames = this.getEventNames(event)
 
-          event.stopPropagation()
+          // works incorrectly when using together with perfect-scrollbar lib
+          // event.stopPropagation()
+
           event.preventDefault()
 
           // We have to do this in case the HTML where the sliders are on

@@ -524,8 +524,8 @@
         },
 
         /*
-       * Reflow the slider when the low handle changes (called with throttle)
-       */
+         * Reflow the slider when the low handle changes (called with throttle)
+         */
         onLowHandleChange: function() {
           this.syncLowValue()
           if (this.range) this.syncHighValue()
@@ -540,8 +540,8 @@
         },
 
         /*
-       * Reflow the slider when the high handle changes (called with throttle)
-       */
+         * Reflow the slider when the high handle changes (called with throttle)
+         */
         onHighHandleChange: function() {
           this.syncLowValue()
           this.syncHighValue()
@@ -1451,8 +1451,8 @@
                   ? 'bottom'
                   : 'top'
                 : reversed
-                  ? 'left'
-                  : 'right'
+                ? 'left'
+                : 'right'
             this.scope.barStyle = {
               backgroundImage:
                 'linear-gradient(to ' +
@@ -2027,7 +2027,9 @@
             ehEnd,
             eventNames = this.getEventNames(event)
 
-          event.stopPropagation()
+          // works incorrectly when using together with perfect-scrollbar lib
+          // event.stopPropagation()
+
           event.preventDefault()
 
           // We have to do this in case the HTML where the sliders are on
