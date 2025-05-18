@@ -1,6 +1,6 @@
 ## AngularJS 1.X slider directive with no external dependencies
 
-Looking for an Angular version (> 1.X)? We got you covered: https://github.com/angular-slider/ng5-slider (Thanks [@piotrdz](https://github.com/piotrdz) :heart: )!
+Looking for an Angular version (> 1.X)? We got you covered: https://github.com/angular-slider/ngx-slider (Thanks [@piotrdz](https://github.com/piotrdz) :heart: )!
 
 <hr />
 
@@ -124,9 +124,9 @@ Directly use (replace `X.X.X` by the version you want to use):
 ### Imports
 
 ```html
-<link rel="stylesheet" type="text/css" href="/path/to/angular-slider/dist/rzslider.css"/>
+<link rel="stylesheet" type="text/css" href="/path/to/angularjs-slider/dist/rzslider.css"/>
 <script src="/path/to/angularjs/angular.min.js"></script>
-<script src="/path/to/angular-slider/dist/rzslider.min.js"></script>
+<script src="/path/to/angularjs-slider/dist/rzslider.min.js"></script>
 ```
 
 ### Module
@@ -244,6 +244,7 @@ The default options are:
     minLimit: null,
     maxLimit: null,
     restrictedRange: null,
+    skipRestrictedRangesWithArrowKeys: null,
     minRange: null,
     maxRange: null,
     pushRange: false,
@@ -312,7 +313,9 @@ The default options are:
 
 **maxLimit** - _Number (defaults to null)_: The maximum value authorized on the slider.
 
-**restrictedRange** - _Object (defaults to null)_: Has two _Number_ properties, _from_ and _to_ that determine the bounds of an area that is not authorized for values. _Applies to range slider only._
+**restrictedRange** - _Object (defaults to null)_: Has two _Number_ properties, _from_ and _to_ that determine the bounds of an area that is not authorized for values. Can also use an array. _Applies to range slider only._
+
+**skipRestrictedRangesWithArrowKeys** - _Boolean (defaults to null)_: Set to true to skip restricted ranges with arrow keys.
 
 **minRange** - _Number (defaults to null)_: The minimum range authorized on the slider. _Applies to range slider only._
 
